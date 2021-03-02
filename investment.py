@@ -27,7 +27,7 @@ def calculate_apr(principal, interest_rate, years):
         
         investment = float(principal)
         if principal < 0 or interest_rate < 0 or years < 0:
-                return false
+                return False
         else:
                 for i in range(years):
                         investment = investment*(1.0+interest_rate)
