@@ -25,7 +25,7 @@ def calculate_apr(principal, interest_rate, years):
         3414.9913672928196
         """
         
-        if isinstance(principal, float) or isinstance(principal, int) and isinstance(interest_rate, float) and isinstance(years, int):
+        if isinstance(principal, float) or isinstance(principal, int) and isinstance(interest_rate, float) and isinstance(years, int) and years >= 0 and interest_rate >=0 and principal >= 0:
                 investment = float(principal)
                 for i in range(years):
                         investment = investment*(1.0+interest_rate)
