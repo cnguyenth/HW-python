@@ -81,7 +81,7 @@ def input_output():
 
         cont = calculator(number1, number2, operation)
         if cont:
-            userAnswer = input("Do you wish to exit?")
+            userAnswer = input("Do you wish to exit? ")
             if userAnswer == "y":
                 cont = False
 
