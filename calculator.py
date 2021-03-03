@@ -29,23 +29,17 @@ def calculator(number1, number2, operator):
 
     """
     if operator == "+":
-        print(number1 + number2)
-        return True
+        return number1 + number2
     elif operator == "-":
-        print(number1 - number2)
-        return True
+        return number1 - number2
     elif operator == "*":
-        print(number1 * number2)
-        return True
+        return number1 * number2
     elif operator == "/":
-        print(number1 / number2)
-        return True
+        return number1 / number2
     elif operator == "//":
-        print(number1 // number2)
-        return True
+        return number1 // number2
     elif operator == "**":
-        print(number1 ** number2)
-        return True
+        return number1 ** number2
     else:
         return False
 
@@ -61,12 +55,12 @@ def input_output():
     Enter the second number: 5
     Enter the operation: **
     32.0
-    Do you wish to exit?n
+    Do you wish to exit? n
     Enter the first number: 1
     Enter the second number: 6
     Enter the operation: -
     -5.0
-    Do you wish to exit?y
+    Do you wish to exit? y
     """
     
     cont = True
@@ -80,7 +74,8 @@ def input_output():
         number2 = float(number2)
 
         cont = calculator(number1, number2, operation)
-        if cont:
+        if isinstance(cont, int) or isinstance(cont, float):
+            print(cont)
             userAnswer = input("Do you wish to exit? ")
             if userAnswer == "y":
                 cont = False
